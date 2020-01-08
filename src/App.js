@@ -21,3 +21,4 @@ export default App;
 // missing some point at :
 // routing -> last part ch 5
 // shop page -> second part ch 6
+// spread operator
