@@ -15,14 +15,14 @@ class Directory extends Component {
             {
                 title: "JACKETS",
                 imageURL: 'https://i.imgur.com/vfXQkrg.png',
-                gifURL: 'https://media.giphy.com/media/AgWQ6FZKqbKTpKUiM9/giphy.gif',
+                gifURL: 'https://media.giphy.com/media/Xd6wgnNbhG3jYmea6m/giphy.gif',
                 id: 2,
                 linkURL: 'jackets'
             },
             {
                 title: "SNEAKERS",
                 imageURL: 'https://i.imgur.com/WUguQT5.png',
-                gifURL: 'https://media.giphy.com/media/VbWTjbqigBpJow3abc/giphy.gif',
+                gifURL: 'https://media.giphy.com/media/WnNjqFrnbaO4ltp4qy/giphy.gif',
                 id: 3,
                 linkURL: 'sneakers'
             },
