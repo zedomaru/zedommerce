@@ -2,8 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './Header.scss'
 import {ReactComponent as Logo} from '../../assets/crown.svg'
+import {auth} from '../../firebase/firebase'
 
-const Header = () => {
+const Header = ({currentUser}) => {
     // const logo = 'https://media.giphy.com/media/jTxVZEItpLGLl7DM7E/giphy.gif'
     return (
         <div className='header'>
@@ -17,6 +18,16 @@ const Header = () => {
                 <Link to='/contact' className='option'>
                     CONTACT
                 </Link>
+                {
+                    currentUser ? 
+                    <div className='option' onClick={() => auth.signOut()}>
+                        SIGN OUT
+                    </div> 
+                    : 
+                    <Link to='/sign-in' className='option'>
+                        SIGN IN
+                    </Link>
+                }
             </div>
         </div>
     )

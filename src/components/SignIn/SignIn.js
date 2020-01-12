@@ -13,7 +13,7 @@ class SignIn extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        //kosongin field habis sumbit
+        //kosongin field/input habis sumbit
         this.setState({
             email: '',
             password: ''
@@ -23,7 +23,7 @@ class SignIn extends Component {
     handleChange = (e) => {
         const {value, name} = e.target
         // console.log({[name]: value})
-        this.setState({ [name] : value}) //---> [name]?
+        this.setState({ [name] : value}) // salah satu cara akses properti objek pake []
     }
 
     render() {
@@ -49,8 +49,12 @@ class SignIn extends Component {
                         handleChange={this.handleChange}
                         label='password'
                         />
-                    <CustomButton type='submit'>Sign In</CustomButton>
-                    <CustomButton onClick={signInWithGoogle}>Sign In With Google!</CustomButton>
+                    <div className='buttons'>
+                        <CustomButton type='submit'>Sign In</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+                            Sign in with Google
+                        </CustomButton>
+                    </div>
                 </form>
             </div>
         )
