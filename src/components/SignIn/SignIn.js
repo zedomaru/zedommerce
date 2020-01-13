@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './SignIn.scss'
 import FormInput from '../FormInput/FormInput'
 import CustomButton from '../CustomButton/CustomButton'
-import {signInWithGoogle} from '../../firebase/firebase'
+import {auth, signInWithGoogle} from '../../firebase/firebase'
 
 class SignIn extends Component {
 
@@ -11,16 +11,24 @@ class SignIn extends Component {
         password: '123123'
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
         //kosongin field/input habis sumbit
-        this.setState({
-            email: '',
-            password: ''
-        })
+        const {email, password} = this.state
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password)
+            this.setState({
+                email: '',
+                password: ''
+            })
+
+        } catch (error) {
+            console.error(error)
+        }
     }
 
-    handleChange = (e) => {
+    handleChange = async (e) => {
         const {value, name} = e.target
         // console.log({[name]: value})
         this.setState({ [name] : value}) // salah satu cara akses properti objek pake []
