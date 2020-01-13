@@ -4,6 +4,9 @@ import './Header.scss'
 import {ReactComponent as Logo} from '../../assets/crown.svg'
 import {auth} from '../../firebase/firebase'
 
+// CONNECT =  function to bind a component with reducers
+import {connect} from 'react-redux'
+
 const Header = ({currentUser}) => {
     // const logo = 'https://media.giphy.com/media/jTxVZEItpLGLl7DM7E/giphy.gif'
     return (
@@ -33,4 +36,10 @@ const Header = ({currentUser}) => {
     )
 }
 
-export default Header
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.user.currentUser
+    }
+}
+
+export default connect(mapStateToProps)(Header)

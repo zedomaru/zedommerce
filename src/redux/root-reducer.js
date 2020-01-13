@@ -1,0 +1,14 @@
+import {combineReducers} from 'redux'
+
+import userReducer from './user/user-reducer'
+
+export default combineReducers({
+    user: userReducer
+})
+
+// redux tips 101:
+// 1. create glue layer to wrap our whole application (using Provider from REACT-REDUX)
+// 2. passing store as a props for the provider
+// 3. store berguna untuk menyimpan state application. cara merubah state yang ada di dalam store adalah
+//    dengan DISPATCH ACTION
+// 4. 
