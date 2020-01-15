@@ -4,6 +4,7 @@ import './Header.scss'
 import {ReactComponent as Logo} from '../../assets/crown.svg'
 import {auth} from '../../firebase/firebase'
 import CartIcon from '../CartIcon/CartIcon'
+import CartDropdown from '../CartDropdown/CartDropdown'
 
 // CONNECT =  function to bind a component with reducers
 import {connect} from 'react-redux'
@@ -34,6 +35,7 @@ const Header = ({currentUser}) => {
                 }
                 <CartIcon/>
             </div>
+            <CartDropdown/>
         </div>
     )
 }
