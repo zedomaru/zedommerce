@@ -9,7 +9,7 @@ import CartDropdown from '../CartDropdown/CartDropdown'
 // CONNECT =  function to bind a component with reducers
 import {connect} from 'react-redux'
 
-const Header = ({currentUser}) => {
+const Header = ({currentUser, hidden}) => {
     // const logo = 'https://media.giphy.com/media/jTxVZEItpLGLl7DM7E/giphy.gif'
     return (
         <div className='header'>
@@ -35,14 +35,17 @@ const Header = ({currentUser}) => {
                 }
                 <CartIcon/>
             </div>
-            <CartDropdown/>
+            {
+                hidden ? null : <CartDropdown/>
+            }
         </div>
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => {
     return {
-        currentUser: state.user.currentUser
+        currentUser,
+        hidden
     }
 }
 
