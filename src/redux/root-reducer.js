@@ -18,3 +18,4 @@ export default combineReducers({
 //REWATCH
 // CHAPTER 8 part 15 menit 10 sampe selesai
 // CHAPTER 8 part 16 CART UTILS
+// CHAPTER 8 part 20 & 22 redux selectors
