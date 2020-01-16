@@ -14,3 +14,7 @@ export default combineReducers({
 // 3. store berguna untuk menyimpan state application. cara merubah state yang ada di dalam store adalah
 //    dengan DISPATCH ACTION
 // 4. 
+
+//REWATCH
+// CHAPTER 8 part 15 menit 10 sampe selesai
+// CHAPTER 8 part 16 CART UTILS

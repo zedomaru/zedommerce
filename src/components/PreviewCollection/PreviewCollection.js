@@ -15,9 +15,9 @@ const PreviewCollection = ({ title, items }) => {
                         // console.log(item)
                         return index < 4
                     })
-                    .map(({id, ...ItemProps}) => {
-                        // console.log(ItemProps)
-                        return <CollectionItem key={id} {...ItemProps}/>
+                    .map(item => {
+                        // console.log(item)
+                        return <CollectionItem key={item.id} item={item}/>
                     })
             }
             </div>
