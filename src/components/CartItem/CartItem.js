@@ -1,5 +1,7 @@
+//import lib
 import React from 'react'
 
+//import style
 import './CartItem.scss'
 
 const CartItem = (item) => {

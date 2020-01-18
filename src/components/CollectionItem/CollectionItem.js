@@ -1,9 +1,18 @@
+//import lib
 import React from 'react'
+
+//import style
 import './CollectionItem.scss'
+
+//import component
 import CustomButton from '../CustomButton/CustomButton'
+
+//import redux state binding function
 import {connect} from 'react-redux'
+
+//import redux actions
 import {addItem} from '../../redux/cart/cart-actions'
-// console.log(addItem())
+
 const CollectionItem = ({item, addItem}) => {
     const {name, price, imageUrl} = item
     return (

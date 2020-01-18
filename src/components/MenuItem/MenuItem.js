@@ -1,6 +1,11 @@
+//import lib
 import React from 'react'
+
+//import style
 import './MenuItem.scss'
-import { withRouter } from 'react-router-dom'
+
+//import react router
+import { withRouter } from 'react-router-dom' //this is for taking history and match props
 
 const MenuItem = ({title, imageURL, size, gifURL, history, linkURL, match}) => {
     // console.log(history)

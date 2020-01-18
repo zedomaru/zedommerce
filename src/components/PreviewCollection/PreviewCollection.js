@@ -1,5 +1,10 @@
+//import lib
 import React from 'react'
+
+//import style
 import './PreviewCollection.scss'
+
+//import component
 import CollectionItem from '../CollectionItem/CollectionItem'
 
 const PreviewCollection = ({ title, items }) => {

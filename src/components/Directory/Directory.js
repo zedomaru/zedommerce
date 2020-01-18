@@ -1,5 +1,10 @@
+//import lib
 import React, { Component } from 'react'
+
+//import style
 import './Directory.scss'
+
+//import component
 import MenuItem from '../MenuItem/MenuItem'
 
 class Directory extends Component {

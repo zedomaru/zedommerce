@@ -1,12 +1,28 @@
+//import lib
 import React from 'react'
-import {Link} from 'react-router-dom'
+
+//import style
 import './Header.scss'
+
+//import assets
 import {ReactComponent as Logo} from '../../assets/crown.svg'
+
+//import react router
+import {Link} from 'react-router-dom'
+
+//import firebase 
 import {auth} from '../../firebase/firebase'
+
+//import component
 import CartIcon from '../CartIcon/CartIcon'
 import CartDropdown from '../CartDropdown/CartDropdown'
 
-// CONNECT =  function to bind a component with reducers
+//import reselect
+import {createStructuredSelector} from 'reselect'
+import {selectCartHidden} from '../../redux/cart/cart-selectors'
+import {selectCurrentUser} from '../../redux/user/user-selectors'
+
+// CONNECT =  function to bind a component state with reducers
 import {connect} from 'react-redux'
 
 const Header = ({currentUser, hidden}) => {
@@ -42,11 +58,11 @@ const Header = ({currentUser, hidden}) => {
     )
 }
 
-const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => {
-    return {
-        currentUser,
-        hidden
-    }
-}
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
+}) 
+    
+
 
 export default connect(mapStateToProps)(Header)
