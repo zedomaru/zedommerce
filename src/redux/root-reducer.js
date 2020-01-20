@@ -4,6 +4,8 @@ import storage from 'redux-persist/lib/storage'
 
 import userReducer from './user/user-reducer'
 import cartReducer from './cart/cart-reducer'
+import directoryReducer from './directory/directory-reducer'
+import shopReducer from './shop/shop-reducer'
 
 const persistConfig = {
     key: 'root',
@@ -13,7 +15,9 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     user: userReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    directory: directoryReducer,
+    shop: shopReducer
 })
 
 export default persistReducer(persistConfig, rootReducer)
@@ -31,3 +35,5 @@ export default persistReducer(persistConfig, rootReducer)
 // CHAPTER 8 part 20 & 22 redux selectors
 // CHAPTER 8 part 29 remove item passing
 // CHAPTER 8 part 30 decrease item logic
+// CHAPTER 9 part 2 redux-persist
+// CHAPTER 11 part 3 collection routing
